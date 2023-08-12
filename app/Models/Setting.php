@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Setting extends Model
 {
     use HasFactory;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -30,14 +31,14 @@ class Setting extends Model
 //        'is_transfer_prices' => 'boolean',
 //    ];
 
-    public static function updateSettings($request)
+    public static function updateSettings($data)
     {
         $settings = Setting::query()->first();
 
         return $settings->update([
-            'access_token' => $request['access_token'],
-            'is_transfer_balances' => isset($request['is_transfer_balances']),
-            'is_transfer_prices' => isset($request['is_transfer_prices']),
+            'access_token' => $data['access_token'],
+            'is_transfer_balances' => isset($data['is_transfer_balances']),
+            'is_transfer_prices' => isset($data['is_transfer_prices']),
         ]);
     }
 }

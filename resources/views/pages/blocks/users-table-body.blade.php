@@ -5,12 +5,12 @@
     <td>{{ $user->id }}</td>
     <td>{{ $user->name }}</td>
     <td>{{ $user->email }}</td>
-    @if($user->isAdmin)
+    @if($user->is_admin)
         <td class="isAdmin">админ
-        <i class="fa-solid fa-crown fa-lg"></i>
+            <i class="fa-solid fa-crown fa-lg"></i>
         </td>
     @else
-        <x-td-delete-button action="/delete/{{$user->id}}" />
+        <x-td-delete-button action="/delete/{{$user->id}}"/>
     @endif
 </tr>
 @php } @endphp

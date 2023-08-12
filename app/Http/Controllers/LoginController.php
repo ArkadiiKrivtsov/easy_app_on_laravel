@@ -15,10 +15,9 @@ class LoginController extends Controller
 
     public function login(LoginRequest $request)
     {
-        $validated= $request->validated();
+        $validated = $request->validated();
 
         if (auth('web')->attempt($validated)) {
-            session()->put('auth_user', auth()->user()->name);
             return redirect()->route('users')->with("message", "Добро пожаловать!");
         }
 

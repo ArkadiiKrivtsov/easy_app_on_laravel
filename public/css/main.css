@@ -1,5 +1,5 @@
 .header-border {
-    width: 700px;
+    width: 800px;
     height: 100px;
     margin: 0 auto;
     border: 1px solid black;
@@ -133,15 +133,15 @@ main {
     margin-left: 3.5%;
 }
 
-.goods_block {
-    padding-top: 9%;
+.main_table {
+    padding-top: 2%;
 }
 
 .table_data_output {
     display: block;
     font-weight: normal;
     border-collapse: collapse;
-    width: 680px;
+    width: 780px;
     height: 400px;
     margin: 2px;
 }
@@ -269,4 +269,53 @@ main {
     text-align: center !important;
     font-size: large;
     font-weight: bold;
+}
+
+.stocks_list {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.stocks_list select {
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.stocks_list button {
+    padding: 3px;
+}
+
+.stocks_list button:hover {
+    border-color: blue;
+}
+
+.load_file_button {
+    margin-top: 3%;
+    font-weight: normal;
+    border-color: gray;
+    cursor: pointer;
+    width: 20%;
+}
+
+.load_file_button:hover {
+    border: 2px solid blue;
+}
+
+.load_file input {
+    border: 2px solid gainsboro;
+    width: 500px;
+}
+
+.load_file {
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+}
+
+.download_file {
+    margin: 3%;
 }

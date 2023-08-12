@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class SettingsController extends Controller
 {
-    public function loadPage()
+    public function index()
     {
         $settings = Setting::query()->first();
 
@@ -17,11 +17,10 @@ class SettingsController extends Controller
     public function update(Request $request)
     {
         $data = $request->all();
-        //dd($request['is_transfer_prices']);
-        if (Setting::updateSettings($request->all())) {
+        if (Setting::updateSettings($data)) {
             return redirect()->route('settings')->with('message', 'Настройки успешно обновлены');
         }
 
-        return redirect()->back()->withErrors('message','Ошибка обновления настроек!');
+        return redirect()->back()->withErrors('message', 'Ошибка обновления настроек!');
     }
 }

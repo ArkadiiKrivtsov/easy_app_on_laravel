@@ -23,6 +23,8 @@ class DatabaseSeeder extends Seeder
             GoodsTableSeeder::class,
             UsersTableSeeder::class,
             SettingsTableSeeder::class,
+            StocksTableSeeder::class,
+            GoodStockTableSeeder::class,
         ]);
     }
 }

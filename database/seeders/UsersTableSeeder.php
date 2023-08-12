@@ -30,16 +30,16 @@ class UsersTableSeeder extends Seeder
             'name' => 'Ваня Админов',
             'email' => 'ark@mail.ru',
             'password' => Hash::make(123),
-            'isAdmin' => true,
+            'is_admin' => true,
         ]);
 
         /* рандомные юзеры */
         foreach (self::$names as $name) {
             DB::table('users')->insert([
                 'name' => $name,
-                'email' => Str::random(5).'@gmail.com',
+                'email' => Str::random(5) . '@gmail.com',
                 'password' => Hash::make('pass'),
-                'isAdmin' => false,
+                'is_admin' => false,
             ]);
         }
     }

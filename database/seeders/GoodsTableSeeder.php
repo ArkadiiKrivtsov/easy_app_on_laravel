@@ -26,8 +26,8 @@ class GoodsTableSeeder extends Seeder
     {
         foreach (self::$goods as $item) {
             DB::table('goods')->insert([
+                'code' => rand(10000, 99999),
                 'name' => $item,
-                'quantity' => rand(1,100)
             ]);
         }
     }

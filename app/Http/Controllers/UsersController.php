@@ -8,12 +8,13 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    public function loadUsersPage()
+    public function index()
     {
         $users = User::all();
 
         return view('pages.users', compact('users'));
     }
+
     public function loadCreateUserPage()
     {
         return view('pages.create_user');
@@ -28,8 +29,6 @@ class UsersController extends Controller
         }
 
     }
-
-
 
     public function destroy($id)
     {
